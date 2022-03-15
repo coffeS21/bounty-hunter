@@ -1,7 +1,6 @@
 const express = require("express")
-const res = require("express/lib/response")
 const server = express()
-
+server.use(express.json())
 const badGuys = [
     {firstName: "mike", lastName: "smith", living: true, killPrice: 500, streetName: "lil dino"},
     {firstName: "frank", lastName: "black", living: true, killPrice: 1500, streetName: "stinky"},
@@ -16,9 +15,14 @@ const badGuys = [
 ]
 
 server.get("/badGuys", (req, res) =>{
-    
+    res.send(badGuys)
 })
 
+server.post("/badGuys", (req, res)=>{
+    const newBadGuy = req.body
+    badGuys.push(newBadGuy)
+    res.send(`you have added ${newBadGuy.streetName} to the gang!`)
+})
 
 server.listen(9000, ()=>{
     console.log("its lit")
