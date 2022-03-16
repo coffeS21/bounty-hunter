@@ -7,6 +7,7 @@ server.use(express.json())
 
 //routes
 server.use("/badGuys", require("./routes/badguyRouter.js"))
+server.use("/goodGuys", require("./routes/goodguyRouter.js"))
 
 
 
