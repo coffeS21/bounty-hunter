@@ -2,6 +2,17 @@ const express = require("express")
 const server = express()
 
 //midlewear
+//* always use the .use method
+//it takes 2 params
+//1. the first param is optional
+//the first param is a route path
+
+/**
+ * 2.callback fucntion
+ * 
+ * what is next? 
+ *  you need to call next or send()
+ */
 server.use(express.json())
 
 
