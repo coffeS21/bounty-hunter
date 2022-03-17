@@ -56,7 +56,7 @@ goodguyRouter.get("/lookup/last", (req,res)=>{
 goodguyRouter.post("/", (req, res)=>{
     const newGoodGuy = req.body
     goodGuys.push(newGoodGuy)
-    res.send(`you have added a new ${goodGuys.streetName} to the group!`)
+    res.send(newGoodGuy)
 })
 
 //delete one

@@ -1,6 +1,6 @@
 const express = require("express")
 const server = express()
-
+const morgan = require("morgan")
 //midlewear
 //* always use the .use method
 //it takes 2 params
@@ -14,6 +14,7 @@ const server = express()
  *  you need to call next or send()
  */
 server.use(express.json())
+server.use(morgan("dev"))//shows bugs in the console
 
 
 //routes
@@ -23,5 +24,5 @@ server.use("/goodGuys", require("./routes/goodguyRouter.js"))
 
 
 server.listen(9000, ()=>{
-    console.log("its lit")
+    console.log("its litdd")
 })

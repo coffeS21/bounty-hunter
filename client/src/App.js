@@ -1,17 +1,10 @@
-import React, {useState, useEffect} from "react";
-import axios from "axios"
-
+import React from "react";
+import AddGoodGuy from "./goodGuyFolder/post/AddGoodGuy"
 function App() {
 
-
-  useEffect(()=>{
-    axios.get("./goodGuys")
-    .then(res => console.log(res))
-    .catch(err => console.log("there is a problem"))
-  },[])
-  return (
+return (
     <>
-
+      <AddGoodGuy/>
     </>
   )
 }
