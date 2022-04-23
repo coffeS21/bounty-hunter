@@ -70,7 +70,7 @@ goodguyRouter.post("/", (req, res)=>{
 goodguyRouter.delete("/:guy", (req,res)=>{
     const guyId = req.params.guy
     const guyIndex = goodGuys.findIndex(saint => saint._id === guyId)
-    goodGuys.splice(guyId, 1)
+    goodGuys.splice(guyIndex, 1)
     res.send(`you have removed ${goodGuys.streetName} from the group!`)
 })
 

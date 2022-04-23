@@ -40,6 +40,7 @@ badguyRouter.get("/search/total",(req, res)=>{
 })
 
 badguyRouter.post("/", (req, res)=>{
+
     const newBadGuy = req.body
     badGuys.push(newBadGuy)
     res.send(`you have added ${newBadGuy.streetName} to the gang!`)

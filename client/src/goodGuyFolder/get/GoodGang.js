@@ -1,11 +1,13 @@
 import React from "react"
 
 function GoodGang(props){
+    const {firstName, lastName, streetName, _id} = props
     return(
         <>
-        <h1>{props.realFirstName}</h1>
-        <h1>{props.realLastName}</h1>
-        <h1>{props.realGangName}</h1>
+        <h1> {firstName}</h1>
+        <h1> {lastName}</h1>
+        <h1> {streetName}</h1>
+        <button onClick={()=> props.delete(_id)}>delete</button>
         </>
     )
 }

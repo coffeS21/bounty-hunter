@@ -13,7 +13,6 @@ function handleSubmit(e){
     e.preventDefault()
     props.postGuy(newGoodGuyInput)
     setNewGoodGuyInput(formData)
-  
   }
     return(
         <>
